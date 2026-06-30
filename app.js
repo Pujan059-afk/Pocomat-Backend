@@ -14,7 +14,7 @@ app.use(cors({
       config.clientUrl,
       'http://localhost:5173', 'http://127.0.0.1:5173',
       'http://localhost:3000', 'http://localhost:4173',
-      'https://pocomat.vercel.app', 'https://www.pocomat.com', 'https://pocomat.com',
+      'https://pocomat-frontend.vercel.app', 'https://www.pocomat.com', 'https://pocomat.com',
     ];
     if (!origin || allowed.includes(origin)) return callback(null, true);
     callback(null, true); // allow all in dev
