@@ -6,14 +6,14 @@ const Admin = require('./models/Admin');
 const seed = async () => {
   try {
     await mongoose.connect(config.mongoUri);
-    const existing = await Admin.findOne({ email: 'pujansubedi059@gmail.com' });
+    const existing = await Admin.findOne({ email: 'pocomatweb@gmail.com' });
     if (existing) {
       console.log('Super admin already exists');
       process.exit(0);
     }
     await Admin.create({
       name: 'Pujan Subedi',
-      email: 'pujansubedi059@gmail.com',
+      email: 'pocomatweb@gmail.com',
       password: 'admin123',
       role: 'super-admin',
       sections: ['ca', 'abroad', 'wd'],
