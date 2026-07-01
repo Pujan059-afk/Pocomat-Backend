@@ -9,7 +9,7 @@ const signToken = (admin) => {
   return jwt.sign(
     { id: admin._id, email: admin.email, role: admin.role, sections: admin.sections },
     config.jwtSecret,
-    { expiresIn: '7d' }
+    { expiresIn: '10d' }
   );
 };
 
