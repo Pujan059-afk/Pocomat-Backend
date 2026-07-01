@@ -9,7 +9,7 @@ const config = {
   cloudinaryApiKey: process.env.CLOUDINARY_API_KEY || '',
   cloudinaryApiSecret: process.env.CLOUDINARY_API_SECRET || 'ijOZru4zIumHbvOJzsK3jo2bOYs',
   emailUser: process.env.EMAIL_USER || '',
-  emailPass: process.env.EMAIL_PASS || '',
+  sendgridApiKey: process.env.SENDGRID_API_KEY || '',
   name: 'Pocomat API',
   version: '1.0.0',
 };
