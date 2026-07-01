@@ -52,6 +52,8 @@ app.use('/api/abroad-seat-bookings', require('./routes/abroadSeatBooking.routes'
 app.use('/api/auth', require('./routes/auth.routes'));
 app.use('/api/ca-downloads', require('./routes/caDownload.routes'));
 app.use('/api/wd-downloads', require('./routes/wdDownload.routes'));
+app.use('/api/wd-team', require('./routes/wdTeamMember.routes'));
+app.use('/api/wd-services', require('./routes/wdService.routes'));
 app.use('/api/upload', require('./routes/upload.routes'));
 
 // Error handling middleware for multer/upload errors
