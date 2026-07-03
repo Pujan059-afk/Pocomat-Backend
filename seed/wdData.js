@@ -9,12 +9,12 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => { console.error(err); process.exit(1); });
 
 const teamData = [
-  { name: 'Aayush Poudel', age: 24, role: 'Project Manager', specialization: 'Full-Stack Development', image: 'https://ui-avatars.com/api/?name=Aayush+Poudel&background=16a34a&color=fff&size=128', instagram: 'https://instagram.com/aayushpoudel', order: 1 },
-  { name: 'Pujan GC', age: 22, role: 'Lead Developer', specialization: 'MERN Stack Development', image: 'https://ui-avatars.com/api/?name=Pujan+GC&background=0284c7&color=fff&size=128', instagram: 'https://instagram.com/pujangc', order: 2 },
-  { name: 'Anisha Thapa', age: 23, role: 'UI/UX Designer', specialization: 'Graphic Design & UI/UX', image: 'https://ui-avatars.com/api/?name=Anisha+Thapa&background=7c3aed&color=fff&size=128', instagram: 'https://instagram.com/anishathapa', order: 3 },
-  { name: 'Roshan Karki', age: 25, role: 'SEO Specialist', specialization: 'SEO & Digital Marketing', image: 'https://ui-avatars.com/api/?name=Roshan+Karki&background=dc2626&color=fff&size=128', instagram: 'https://instagram.com/roshankarki', order: 4 },
-  { name: 'Sneha Adhikari', age: 21, role: 'Frontend Developer', specialization: 'React & Next.js Development', image: 'https://ui-avatars.com/api/?name=Sneha+Adhikari&background=d97706&color=fff&size=128', instagram: 'https://instagram.com/snehaadhikari', order: 5 },
-  { name: 'Bibek Sharma', age: 26, role: 'Backend Developer', specialization: 'Node.js & Database Architecture', image: 'https://ui-avatars.com/api/?name=Bibek+Sharma&background=0d9488&color=fff&size=128', instagram: 'https://instagram.com/bibeksharma', order: 6 },
+  { name: 'Aayush Poudel', role: 'Project Manager', specialization: 'Full-Stack Development', image: 'https://ui-avatars.com/api/?name=Aayush+Poudel&background=16a34a&color=fff&size=128', instagram: 'https://instagram.com/aayushpoudel', order: 1 },
+  { name: 'Pujan GC', role: 'Lead Developer', specialization: 'MERN Stack Development', image: 'https://ui-avatars.com/api/?name=Pujan+GC&background=0284c7&color=fff&size=128', instagram: 'https://instagram.com/pujangc', order: 2 },
+  { name: 'Anisha Thapa', role: 'UI/UX Designer', specialization: 'Graphic Design & UI/UX', image: 'https://ui-avatars.com/api/?name=Anisha+Thapa&background=7c3aed&color=fff&size=128', instagram: 'https://instagram.com/anishathapa', order: 3 },
+  { name: 'Roshan Karki', role: 'SEO Specialist', specialization: 'SEO & Digital Marketing', image: 'https://ui-avatars.com/api/?name=Roshan+Karki&background=dc2626&color=fff&size=128', instagram: 'https://instagram.com/roshankarki', order: 4 },
+  { name: 'Sneha Adhikari', role: 'Frontend Developer', specialization: 'React & Next.js Development', image: 'https://ui-avatars.com/api/?name=Sneha+Adhikari&background=d97706&color=fff&size=128', instagram: 'https://instagram.com/snehaadhikari', order: 5 },
+  { name: 'Bibek Sharma', role: 'Backend Developer', specialization: 'Node.js & Database Architecture', image: 'https://ui-avatars.com/api/?name=Bibek+Sharma&background=0d9488&color=fff&size=128', instagram: 'https://instagram.com/bibeksharma', order: 6 },
 ];
 
 const serviceData = [

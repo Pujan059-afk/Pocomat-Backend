@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 
 const wdTeamMemberSchema = new mongoose.Schema({
   name: { type: String, required: true },
-  age: { type: Number, default: null },
   role: { type: String, required: true },
   specialization: { type: String, default: '' },
   image: { type: String, default: '' },
