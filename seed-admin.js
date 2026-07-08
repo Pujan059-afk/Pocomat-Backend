@@ -12,7 +12,7 @@ const seed = async () => {
       process.exit(0);
     }
     await Admin.create({
-      name: 'Pujan Subedi',
+      name: 'POCOMAT',
       email: 'pocomatweb@gmail.com',
       password: 'admin123',
       role: 'super-admin',
