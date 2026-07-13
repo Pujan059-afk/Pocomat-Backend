@@ -44,6 +44,7 @@ app.use('/api/ca-news', require('./routes/caNews.routes'));
 app.use('/api/wd-news', require('./routes/wdNews.routes'));
 app.use('/api/abroad-news', require('./routes/abroadNews.routes'));
 app.use('/api/ca-students', require('./routes/caStudent.routes'));
+app.use('/api/ca-certificates', require('./routes/caCertificate.routes'));
 app.use('/api/wd-students', require('./routes/wdStudent.routes'));
 app.use('/api/ca-testimonials', require('./routes/caTestimonial.routes'));
 app.use('/api/wd-testimonials', require('./routes/wdTestimonial.routes'));
