@@ -6,6 +6,7 @@ const caCertificateSchema = new mongoose.Schema({
   course: { type: String, required: true },
   issueDate: { type: String, required: true },
   grade: { type: String, default: '' },
+  description: { type: String, default: '' },
   duration: { type: String, default: '' },
   photoUrl: { type: String, default: '' },
   status: { type: String, default: 'Verified', enum: ['Verified', 'Revoked'] },
