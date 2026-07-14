@@ -10,6 +10,7 @@ const caEnrollmentSchema = new mongoose.Schema({
   preferredTime: { type: String, required: true },
   guardianName: { type: String, default: '' },
   notes: { type: String, default: '' },
+  status: { type: String, default: 'pending', enum: ['pending', 'accepted', 'rejected'] },
 }, { timestamps: true });
 
 module.exports = mongoose.model('ComputerAcademyEnrollment', caEnrollmentSchema);

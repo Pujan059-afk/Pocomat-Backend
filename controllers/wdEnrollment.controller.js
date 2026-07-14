@@ -1,4 +1,5 @@
 const WDEnrollment = require('../models/WebDevineersEnrollment');
+const WDStudent = require('../models/WebDevineersStudent');
 
 exports.getAll = async (req, res) => {
   try {
@@ -49,5 +50,39 @@ exports.remove = async (req, res) => {
     res.json({ message: 'Enrollment deleted' });
   } catch (err) {
     res.status(500).json({ message: err.message });
+  }
+};
+
+exports.accept = async (req, res) => {
+  try {
+    const enrollment = await WDEnrollment.findById(req.params.id);
+    if (!enrollment) return res.status(404).json({ message: 'Enrollment not found' });
+
+    const student = await WDStudent.create({
+      name: enrollment.fullName,
+      program: enrollment.course,
+      verified: true,
+    });
+
+    enrollment.status = 'accepted';
+    await enrollment.save();
+
+    res.json({ enrollment, student });
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+};
+
+exports.reject = async (req, res) => {
+  try {
+    const enrollment = await WDEnrollment.findByIdAndUpdate(
+      req.params.id,
+      { status: 'rejected' },
+      { new: true }
+    );
+    if (!enrollment) return res.status(404).json({ message: 'Enrollment not found' });
+    res.json(enrollment);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
   }
 };
