@@ -1,17 +1,5 @@
 const Certificate = require('../models/ComputerAcademyCertificate');
 
-const generateCode = async () => {
-  const year = new Date().getFullYear();
-  let code;
-  let exists = true;
-  while (exists) {
-    const rand = Math.floor(1000 + Math.random() * 9000);
-    code = `PCM-${year}-${rand}`;
-    exists = await Certificate.findOne({ certificateCode: code });
-  }
-  return code;
-};
-
 exports.getAll = async (req, res) => {
   try {
     const certificates = await Certificate.find().sort({ createdAt: -1 });
@@ -44,8 +32,16 @@ exports.getByCode = async (req, res) => {
 
 exports.create = async (req, res) => {
   try {
-    const certificateCode = await generateCode();
-    const certificate = await Certificate.create({ ...req.body, certificateCode });
+    const { certificateCode, ...rest } = req.body;
+    if (!certificateCode || !certificateCode.trim()) {
+      return res.status(400).json({ message: 'Certificate ID is required' });
+    }
+    const code = certificateCode.trim().toUpperCase();
+    const exists = await Certificate.findOne({ certificateCode: code });
+    if (exists) {
+      return res.status(400).json({ message: 'Certificate ID already exists' });
+    }
+    const certificate = await Certificate.create({ ...rest, certificateCode: code });
     res.status(201).json(certificate);
   } catch (err) {
     res.status(400).json({ message: err.message });
