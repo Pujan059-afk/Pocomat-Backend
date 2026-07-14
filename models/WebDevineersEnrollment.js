@@ -11,6 +11,7 @@ const wdEnrollmentSchema = new mongoose.Schema({
   guardianName: { type: String, default: '' },
   notes: { type: String, default: '' },
   status: { type: String, default: 'pending', enum: ['pending', 'accepted', 'rejected'] },
+  rejectedAt: { type: Date, default: null },
 }, { timestamps: true });
 
 module.exports = mongoose.model('WebDevineersEnrollment', wdEnrollmentSchema);

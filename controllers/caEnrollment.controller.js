@@ -77,7 +77,7 @@ exports.reject = async (req, res) => {
   try {
     const enrollment = await CAEnrollment.findByIdAndUpdate(
       req.params.id,
-      { status: 'rejected' },
+      { status: 'rejected', rejectedAt: new Date() },
       { new: true }
     );
     if (!enrollment) return res.status(404).json({ message: 'Enrollment not found' });

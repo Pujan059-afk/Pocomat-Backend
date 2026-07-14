@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const config = require('./config/config');
 const connectDB = require('./config/database');
+const CAEnrollment = require('./models/ComputerAcademyEnrollment');
+const WDEnrollment = require('./models/WebDevineersEnrollment');
 
 const app = express();
 
@@ -56,6 +58,19 @@ app.use('/api/wd-downloads', require('./routes/wdDownload.routes'));
 app.use('/api/wd-team', require('./routes/wdTeamMember.routes'));
 app.use('/api/wd-services', require('./routes/wdService.routes'));
 app.use('/api/upload', require('./routes/upload.routes'));
+
+// Auto-delete rejected enrollments after 24 hours (runs every hour)
+setInterval(async () => {
+  try {
+    const cutoff = new Date(Date.now() - 24 * 60 * 60 * 1000);
+    const caResult = await CAEnrollment.deleteMany({ status: 'rejected', rejectedAt: { $lte: cutoff } });
+    const wdResult = await WDEnrollment.deleteMany({ status: 'rejected', rejectedAt: { $lte: cutoff } });
+    const total = caResult.deletedCount + wdResult.deletedCount;
+    if (total > 0) console.log(`Auto-deleted ${total} rejected enrollments older than 24h`);
+  } catch (err) {
+    console.error('Auto-delete rejected enrollments error:', err.message);
+  }
+}, 60 * 60 * 1000); // every 1 hour
 
 // Error handling middleware for multer/upload errors
 app.use((err, req, res, next) => {

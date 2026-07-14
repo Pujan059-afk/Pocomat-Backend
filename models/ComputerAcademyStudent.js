@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const caStudentSchema = new mongoose.Schema({
   name: { type: String, required: true },
   dob: { type: String, default: '' },
-  symbolNo: { type: String, required: true },
+  symbolNo: { type: String, default: '' },
   registrationNo: { type: String, default: '' },
   program: { type: String, default: '' },
   imageUrl: { type: String, default: '' },
