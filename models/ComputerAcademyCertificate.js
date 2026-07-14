@@ -6,6 +6,8 @@ const caCertificateSchema = new mongoose.Schema({
   course: { type: String, required: true },
   issueDate: { type: String, default: '' },
   nepaliDate: { type: String, required: true },
+  nepaliStartDate: { type: String, default: '' },
+  nepaliEndDate: { type: String, default: '' },
   startDate: { type: String, default: '' },
   endDate: { type: String, default: '' },
   description: { type: String, default: '' },
