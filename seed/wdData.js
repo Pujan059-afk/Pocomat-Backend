@@ -9,27 +9,16 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => { console.error(err); process.exit(1); });
 
 const teamData = [
-  { name: 'Manu', role: 'Designer', order: 1 },
-  { name: 'Rakshit', role: 'Designer', order: 2 },
+  { name: 'Manu', role: 'Designer | Office Work Manager | Content Creator | Marketing Operator', order: 1 },
+  { name: 'Rakshit', role: 'Designer | Social Media Handler | Marketing Operator', order: 2 },
   { name: 'Damu', role: 'Designer', order: 3 },
-  { name: 'Manisha', role: 'Designer', order: 4 },
-  { name: 'Manju', role: 'Designer', order: 5 },
+  { name: 'Manisha', role: 'Designer | Social Media Handler | Office Work Manager | Content Creator', order: 4 },
+  { name: 'Manju', role: 'Designer | Office Work Manager', order: 5 },
   { name: 'Chadani', role: 'SEO', order: 6 },
   { name: 'Samana', role: 'SEO', order: 7 },
   { name: 'Yosoda', role: 'SEO', order: 8 },
-  { name: 'Rakshit', role: 'Social Media Handler', order: 9 },
-  { name: 'Aayush', role: 'Social Media Handler', order: 10 },
-  { name: 'Manisha', role: 'Social Media Handler', order: 11 },
-  { name: 'Manju', role: 'Office Work', order: 12 },
-  { name: 'Manu', role: 'Office Work', order: 13 },
-  { name: 'Manisha', role: 'Office Work', order: 14 },
-  { name: 'Aayush', role: 'Content Creator', order: 15 },
-  { name: 'Manisha', role: 'Content Creator', order: 16 },
-  { name: 'Manu', role: 'Content Creator', order: 17 },
-  { name: 'Aayush', role: 'Editor', order: 18 },
-  { name: 'Rana', role: 'Editor', order: 19 },
-  { name: 'Rakshit', role: 'Marketing Operator', order: 20 },
-  { name: 'Manu', role: 'Marketing Operator', order: 21 },
+  { name: 'Aayush', role: 'Social Media Handler | Content Creator | Editor', order: 9 },
+  { name: 'Rana', role: 'Editor', order: 10 },
 ];
 
 const serviceData = [
