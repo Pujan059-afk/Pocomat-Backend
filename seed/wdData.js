@@ -9,16 +9,16 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => { console.error(err); process.exit(1); });
 
 const teamData = [
-  { name: 'Manu', role: 'Designer | Office Work Manager | Content Creator | Marketing Operator', order: 1 },
-  { name: 'Rakshit', role: 'Designer | Social Media Handler | Marketing Operator', order: 2 },
-  { name: 'Damu', role: 'Designer', order: 3 },
-  { name: 'Manisha', role: 'Designer | Social Media Handler | Office Work Manager | Content Creator', order: 4 },
-  { name: 'Manju', role: 'Designer | Office Work Manager', order: 5 },
-  { name: 'Chadani', role: 'SEO', order: 6 },
-  { name: 'Samana', role: 'SEO', order: 7 },
-  { name: 'Yosoda', role: 'SEO', order: 8 },
-  { name: 'Aayush', role: 'Social Media Handler | Content Creator | Editor', order: 9 },
-  { name: 'Rana', role: 'Editor', order: 10 },
+  { name: 'Manu', role: 'Designer | Office Work Manager | Content Creator | Marketing Operator', image: 'https://ui-avatars.com/api/?name=Manu&background=16a34a&color=fff&size=128', order: 1 },
+  { name: 'Rakshit', role: 'Designer | Social Media Handler | Marketing Operator', image: 'https://ui-avatars.com/api/?name=Rakshit&background=0284c7&color=fff&size=128', order: 2 },
+  { name: 'Damu', role: 'Designer', image: 'https://ui-avatars.com/api/?name=Damu&background=7c3aed&color=fff&size=128', order: 3 },
+  { name: 'Manisha', role: 'Designer | Social Media Handler | Office Work Manager | Content Creator', image: 'https://ui-avatars.com/api/?name=Manisha&background=d97706&color=fff&size=128', order: 4 },
+  { name: 'Manju', role: 'Designer | Office Work Manager', image: 'https://ui-avatars.com/api/?name=Manju&background=0d9488&color=fff&size=128', order: 5 },
+  { name: 'Chadani', role: 'SEO', image: 'https://ui-avatars.com/api/?name=Chadani&background=dc2626&color=fff&size=128', order: 6 },
+  { name: 'Samana', role: 'SEO', image: 'https://ui-avatars.com/api/?name=Samana&background=7c3aed&color=fff&size=128', order: 7 },
+  { name: 'Yosoda', role: 'SEO', image: 'https://ui-avatars.com/api/?name=Yosoda&background=d97706&color=fff&size=128', order: 8 },
+  { name: 'Aayush', role: 'Social Media Handler | Content Creator | Editor', image: 'https://ui-avatars.com/api/?name=Aayush&background=16a34a&color=fff&size=128', order: 9 },
+  { name: 'Rana', role: 'Editor', image: 'https://ui-avatars.com/api/?name=Rana&background=0284c7&color=fff&size=128', order: 10 },
 ];
 
 const serviceData = [
