@@ -9,12 +9,28 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => { console.error(err); process.exit(1); });
 
 const teamData = [
-  { name: 'Aayush Poudel', role: 'Project Manager', specialization: 'Full-Stack Development', image: 'https://ui-avatars.com/api/?name=Aayush+Poudel&background=16a34a&color=fff&size=128', instagram: 'https://instagram.com/aayushpoudel', order: 1 },
-  { name: 'Pujan GC', role: 'Lead Developer', specialization: 'MERN Stack Development', image: 'https://ui-avatars.com/api/?name=Pujan+GC&background=0284c7&color=fff&size=128', instagram: 'https://instagram.com/pujangc', order: 2 },
-  { name: 'Anisha Thapa', role: 'UI/UX Designer', specialization: 'Graphic Design & UI/UX', image: 'https://ui-avatars.com/api/?name=Anisha+Thapa&background=7c3aed&color=fff&size=128', instagram: 'https://instagram.com/anishathapa', order: 3 },
-  { name: 'Roshan Karki', role: 'SEO Specialist', specialization: 'SEO & Digital Marketing', image: 'https://ui-avatars.com/api/?name=Roshan+Karki&background=dc2626&color=fff&size=128', instagram: 'https://instagram.com/roshankarki', order: 4 },
-  { name: 'Sneha Adhikari', role: 'Frontend Developer', specialization: 'React & Next.js Development', image: 'https://ui-avatars.com/api/?name=Sneha+Adhikari&background=d97706&color=fff&size=128', instagram: 'https://instagram.com/snehaadhikari', order: 5 },
-  { name: 'Bibek Sharma', role: 'Backend Developer', specialization: 'Node.js & Database Architecture', image: 'https://ui-avatars.com/api/?name=Bibek+Sharma&background=0d9488&color=fff&size=128', instagram: 'https://instagram.com/bibeksharma', order: 6 },
+  { name: 'Pujan', role: 'Developer', order: 1 },
+  { name: 'Beeju', role: 'Developer', order: 2 },
+  { name: 'Manu', role: 'Designer', order: 3 },
+  { name: 'Rakshit', role: 'Designer', order: 4 },
+  { name: 'Danu', role: 'Designer', order: 5 },
+  { name: 'Manisha', role: 'Designer', order: 6 },
+  { name: 'Chadani', role: 'SEO', order: 7 },
+  { name: 'Samana', role: 'SEO', order: 8 },
+  { name: 'Yosoda', role: 'SEO', order: 9 },
+  { name: 'Rakshit', role: 'Social Media', order: 10 },
+  { name: 'Aayush', role: 'Social Media', order: 11 },
+  { name: 'Manisha', role: 'Social Media', order: 12 },
+  { name: 'Anju', role: 'Office Work', order: 13 },
+  { name: 'Manu', role: 'Office Work', order: 14 },
+  { name: 'Manisha', role: 'Office Work', order: 15 },
+  { name: 'Aayush', role: 'Content Creator', order: 16 },
+  { name: 'Manish', role: 'Content Creator', order: 17 },
+  { name: 'Manu', role: 'Content Creator', order: 18 },
+  { name: 'Aayush', role: 'Tutor', order: 19 },
+  { name: 'Rana', role: 'Tutor', order: 20 },
+  { name: 'Rakshit', role: 'Marketing Operator', order: 21 },
+  { name: 'Manu', role: 'Marketing Operator', order: 22 },
 ];
 
 const serviceData = [
